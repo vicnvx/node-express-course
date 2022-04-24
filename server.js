@@ -8,6 +8,7 @@ const mockUserData = [
     {name:'Jill'}
 ]
 
+// respond to a GET request at localhost:8000/users with res.json()
 app.get('/users', function(req, res) {
     res.json({
         success: true,

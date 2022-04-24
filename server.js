@@ -11,6 +11,11 @@ const mockUserData = [
     {name:'Jill'}
 ]
 
+const mockData = [
+    {0: "abc"},
+    {1: "123"}
+]
+
 // respond to a GET request at localhost:8000/users with res.json()
 app.get('/users', function(req, res) {
     res.json({
@@ -28,6 +33,16 @@ app.get('/users/:id', function(req, res) {
         user: req.params.id
     })
 })
+
+app.get('/data', function(req, res) {
+    res.json({
+        "success": true,
+        "message": "heres the data",
+        data: mockData
+    })
+} )
+
+
 app.post('/login', function(req, res) {
     const username = req.body.username;
     const password = req.body.password;

@@ -28,7 +28,7 @@ app.get('/users/:id', function(req, res) {
         user: req.params.id
     })
 })
-app.post('.login', function(req, res) {
+app.post('/login', function(req, res) {
     const username = req.body.username;
     const password = req.body.password;
 
